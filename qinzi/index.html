@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鱼儿亲子</title>
+	<link rel="stylesheet" href="./dist/base.css">
+	<link rel="stylesheet" href="./dist/main.css">
+</head>
+<body>
+	<div class="header">
+		<div class="header-box">
+			<div class="logo"><img src="./images/logo.png"></div>
+			<div class="telme">
+				<p style="font-size: 20px; line-height: 28px;"><img src="./images/icon-phone.png">400-088-5207</p>
+				<p style="font-size: 15px; line-height: 21px;">即刻咨询，专业顾问为您解答</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="banner">
+		<ul id="banner">
+			<li class="active"><img src="./images/banner1.png"></li>
+		</ul>
+	</div>
+
+	<div class="swiper">
+		<h2>课程特色 优质安全</h2>
+		<p>一般亲子游都是爸爸妈妈带着宝宝下水，正常亲子游家长给宝贝办完卡，却由于工作忙没时间经常带宝宝去，导致耗卡慢；一些机构为了不得罪客户，看到家长有明显的皮肤病，也不会阻止家长下水 。 鱼儿亲子从根源解决问题，一律拒绝家长下水。由持有健康证明的专业教练身着专业防护服全程指导宝宝游泳、安全陪护，水质卫生、宝宝健康更有保障。家长只需在指定区域等待或观赏宝宝游泳，享受鱼儿亲子提供的极致服务。这样更容易吸引家长，提升消费频次。</p>
+		<ul>
+			<li>
+				<p>家长不下水<br>水质有保证</p>
+				<img src="./images/swiper1.png" alt="">
+			</li>
+			<li>
+				<img src="./images/swiper2.png" alt="">
+				<p>教练一对一<br>安全又放心</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="text">
+		<h4>什么是STA认证？</h4>
+		<p>STA是世界上最大的游泳教学及救生组织，英 “ Swimming Teachers' Association”的缩写，成立于1932年，拥有颁发教练资质及考试资格。<br>在鱼儿亲子，所有教练都通过全球顶级游泳协会——英国游泳协会(STA)专门针对亲子游泳教练的证书认证，并都接受过特约教练-朱利安(Julie-Ann)教授PABA <br>课程及亲子游泳课程的特别培训。 </p>
+	</div>
+
+	<div class="address">
+		<h2>选择门店 省时省地</h2>
+		<ul>
+			<li>
+				<h4>Q&A</h4>
+				<span>做其它亲子游加盟要求500-1000平？</span>
+				<p>不，我们只要使用面积200平</p>
+			</li>
+			<li>
+				<h4>Q&A</h4>
+				<span>做其他亲子游品牌耗卡慢，难回本？</span>
+				<p>不，专业老师1对1，一次耗两次卡</p>
+			</li>
+			<li>
+				<h4>Q&A</h4>
+				<span>做其他品牌还需要经常更换游泳圈？</span>
+				<p>不，我们提倡教练辅导，让孩子真 正学会游泳</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="form-join">
+		<div class="form-box">
+			<div class="form">
+				<h2>加入我们</h2>
+				<ul>
+					<li><span>姓名</span><input type="text" id="customerName"></li>
+					<li>
+						<span>性别</span>
+						<label>
+							<input type="radio" name="sex" value="man" checked><span>男</span>
+						</label>
+						<label>
+							<input type="radio" name="sex" value="woman"><span>女</span>
+						</label>
+					</li>
+					<li><span>联系方式</span><input type="text" id="tel"></li>
+					<li><a href="javascript:;" id="submit">提交</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="map-box">
+			<img src="./images/map.png" alt="">
+		</div>
+	</div>
+
+	<div class="footer">
+		加入我们：400-088-5207 <span>京ICP备18053371号</span>
+	</div>
+	<script src="./dist/jquery.min.js"></script>
+	<script>
+		$('#submit').on('click', function () {
+			var customerName = $('#customerName').val(),
+					sex = $("input[name='sex']:checked").val(),
+					tel = $('#tel').val();
+
+			console.log(sex);
+			var telReg = /^1([358][0-9]|4[579]|66|7[0135678]|9[89])[0-9]{8}$/;
+			if (!customerName) {
+				alert('请输入正确的姓名');
+				return;
+			}
+			if (!telReg.test(tel)) {
+				alert('请输入正确的联系方式');
+				return;
+			}
+
+			$.ajax({
+				url: 'http://oac.beibeiyue.com/s/saveClueInfo',
+				type: 'post',
+				data: {
+					customerName: customerName,
+					sex: sex,
+					tel: tel,
+					source: 'qinzi'
+				},
+				dataType: 'json',
+				success: function (res) {
+					alert(res.flag == 0 ? '提交成功' : '提交失败')
+				}
+			})
+		})
+	</script>
+
+	<div class="fixed joinBtn"><img src="./images/icon-fixed.png" alt=""></div>
+	<style>
+		.fixed { position: fixed; bottom: 30%; left: 6%; cursor: pointer; }
+		.fixed img { width: 100px; }
+		.popbg{
+			background: rgb(0, 0, 0);
+		    opacity: 0.5;
+		    position: fixed;
+		    top: 0px;
+		    left: 0px;
+		    width: 100%;
+		    height: 100%;
+		    display: none;
+		}
+		.joinPop{
+			background: #fff;
+			width:400px;
+			height:410px;
+			position: fixed;
+			left:50%;
+			top:50%;
+			margin-top:-215px;
+			margin-left:-200px;
+			border-radius: 30px;
+			display: none;
+			z-index:10000
+		}
+		.ylbbLogo{
+			background: url(./images/icon-fixed-head.png) no-repeat;
+			width: 100px;
+			height:100px;
+			position: absolute;
+			left:50%;
+			margin-left:-50px;
+			margin-top:-50px;
+			background-size: 100% 100%;
+		}
+		.joinCountBox{
+			margin:70px auto 30px;
+		}
+		.joinCountBox li{
+			width:350px;
+			height:50px;
+			margin:0 auto 28px;
+			border-radius: 5px;
+		}
+		.joinCountBox li div{
+			background:#f5f4f2;
+		}
+		.joinCountBox li input.firstInput{
+			height:50px;
+			line-height: 50px;
+			width:80%;
+			float: left;
+			font-size:15px
+		}
+		.joinCountBox em{
+			display: inline-block;
+			width:70px;
+			height:50px;
+			line-height: 50px;
+			text-align: center;
+			font-size:15px;
+			float: left;
+		}
+		.joinPop input{
+			border:none;
+			background: none;
+			outline: none;
+		}
+		.genderBox{
+			float:left;
+			margin-top: 13px;
+		}
+		em{
+			font-style: normal;
+		}
+		.genderBox span{
+			font-size:15px;
+		}
+		.joinCountBox input[type="radio"] {
+		    display: inline-block;
+		    width: 20px;
+		    height: 20px;
+		    background: url(./images/select.png) no-repeat;
+		    background-size: 100% 100%;
+		    vertical-align: middle;
+		}
+		.joinCountBox input[type="radio"]:checked {
+		    background: url(./images/select2.png) no-repeat center;
+		    background-size: 100% 100%;
+		}
+		.joinCountBox span{
+			display: inline-block;
+			overflow: hidden;
+			margin-right: 45px;
+		}
+		.joinCountBox label{
+			display: inline-block;
+			margin-left:8px
+		}
+		.getBtn{
+			height: 50px;
+			line-height: 50px;
+			background: rgba(154,207,162,1);
+			width:350px;
+			margin:0 auto;
+			border-radius: 10px;
+			text-align: center;
+			font-size:18px;
+			color:#fff;
+			cursor: pointer;
+		}
+		.errorTip{
+			font-style: normal;
+			margin:5px 0;
+			display: block;
+			font-size:14px;
+			color:#fa5555;
+			text-indent: 69px;
+			display: none;
+		}
+		.closeBtn{
+			position: absolute;
+			right:28px;
+			top:21px;
+			background: url(./images/xia.png) no-repeat;
+			width:20px;
+			height:20px;
+			background-size:100% 100%;
+		}
+		.popTips{
+			max-width: 380px;
+		    box-sizing: border-box;
+		    border-radius: 4px;
+		    border: 1px solid #ebeef5;
+		    position: fixed;
+		    left: 50%;
+		    top: 50%;
+		    transform: translateX(-50%);
+		    background-color: #edf2fc;
+		    transition: opacity .3s,transform .4s;
+		    overflow: hidden;
+		    padding: 15px 35px 15px 20px;
+		    display: flex;
+		    align-items: center;
+		    display:none;
+		    margin-top: -55px;
+		}
+		.popTips span{
+			color: #909399;
+		}
+		.popTips .closeSmall{
+			display: inline-block;
+			background: url(./images/xia.png) no-repeat;
+			width:12px;
+			height:12px;
+			background-size:100% 100%;
+			position: absolute;
+		    top:10px;
+		    right: 15px;
+		    cursor: pointer;
+		}
+		.activePop{
+			transition: opacity .3s,transform .4s;
+		}
+
+		.clearfix:after {
+		  content: ".";
+		  display: block;
+		  height: 0;
+		  clear: both;
+		  visibility: hidden;
+		}
+		.clearfix {zoom: 1;}
+	</style>
+	<div class="popbg"></div>
+	<div class="joinPop">
+			<span class="ylbbLogo"></span>
+			<a href="javascript:void(0)" class="closeBtn"></a>
+			<form>
+				<ul class="joinCountBox">
+					<li>
+						<div class="clearfix"><em>姓名</em><input type="text" placeholder="请输入姓名" class="firstInput" id="nameBox"></div>
+						<i class="errorTip nameTip"></i>
+					</li>
+					<li>
+						<div class="clearfix"><em>电话</em><input type="text" placeholder="请输入电话号码" class="firstInput" id="phoneBox" oninput="this.value=this.value.replace(/\D/g,'');this.value=this.value.substr(0,11)"></div>
+						<i class="errorTip phoneTip"></i>
+					</li>
+					<li>
+						<div class="clearfix">
+							<em>性别</em>
+							<div class="genderBox">
+								<span><input type="radio" id="male" name="sex1" checked="checked" value="先生"><label for="male">男</label></span>
+								<span><input type="radio" id="female" name="sex1" value="女士"><label for="female">女</label></span>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="getBtn">立即咨询</div>
+			</form>
+		</div>
+		<script>
+			$(function() {
+
+			$('.joinBtn').click(function(){
+	$('#nameBox').val('');
+	$('#phoneBox').val('');
+	$('.errorTip').css('display','none');
+	$('.popbg').show();
+	$('.joinPop').show();
+});
+$('.closeBtn').click(function(){
+	$('.popbg').hide();
+	$('.joinPop').hide();
+});
+$('.closeSmall').click(function(){
+	$('.popbg').hide();
+	$('.popTips').hide();
+})
+	//验证名字
+	var isName=/^[\u4e00-\u9fa5]{1,20}$/
+	//验证手机号
+	var isMob = /^0?(13[0-9]|15[012356789]|16[6]|17[013678]|18[0-9]|14[57])[0-9]{8}$/;
+	var clickTop = true;//初始化点击状态
+	$('.getBtn').click(function(){
+		if(!$('#nameBox').val()){
+			$('.nameTip').css('display','block');
+			$('.nameTip').html('请输入姓名');
+			return
+		}else if(!isName.test($('#nameBox').val())){
+			$('.nameTip').css('display','block');
+			$('.nameTip').html('姓名只能是中文');
+			return
+		}else{
+			$('.nameTip').css('display','none');
+			$('.nameTip').html('');
+		}
+		if(!$('#phoneBox').val()){
+			$('.phoneTip').css('display','block');
+			$('.phoneTip').html('请输入电话号码');
+			return
+		}else if(!isMob.test($('#phoneBox').val())){
+			$('.phoneTip').css('display','block');
+			$('.phoneTip').html('请输入正确的电话号码');
+			return
+		}else{
+			$('.phoneTip').css('display','none');
+			$('.phoneTip').html('');
+			var checkedSex = $('.genderBox').find('input[type=radio]:checked').val();
+			//console.log(checkedSex)
+			var params = {
+				name:$('#nameBox').val(),
+	            mobile:$('#phoneBox').val(),
+	            sex:checkedSex,
+	            area:1,
+	            measure:1,
+	            position:1,
+	            source:3,
+	            basepath:window.location.href,
+	            nodeThree:10001016
+			}
+			if(clickTop){
+				clickTop = false; 
+
+				$.ajax({
+					url: 'http://oac.beibeiyue.com/s/saveClueInfo',
+					type: 'post',
+					data: {
+						customerName: $('#nameBox').val(),
+						sex: checkedSex,
+						tel: $('#phoneBox').val(),
+						source: 'qinzi'
+					},
+					dataType: 'json',
+					success: function (res) {
+						clickTop = true;
+						alert(res.flag == 0 ? '提交成功' : '提交失败');
+					}
+				})
+			}
+		}
+	});
+	$('#nameBox').blur(function(){
+		if(!$(this).val()){
+			$('.nameTip').css('display','block');
+			$('.nameTip').html('请输入姓名');
+			return
+		}else if(!isName.test($('#nameBox').val())){
+			$('.nameTip').css('display','block');
+			$('.nameTip').html('姓名只能是中文');
+			return
+		}else{
+			$('.nameTip').css('display','none');
+		}
+	});
+	$('#phoneBox').blur(function(){
+		if(!$(this).val()){
+			$('.phoneTip').css('display','block');
+			$('.phoneTip').html('请输入电话号码');
+			return
+		}else if(!isMob.test($('#phoneBox').val())){
+			$('.phoneTip').css('display','block');
+			$('.phoneTip').html('请输入正确的电话号码');
+			return
+		}else{
+			$('.phoneTip').css('display','none');
+		}
+	});
+	
+			})
+		</script>
+</body>
+</html>

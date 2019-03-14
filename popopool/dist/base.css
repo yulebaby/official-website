@@ -170,3 +170,14 @@ footer {
 .fixed li:hover div {
 	opacity: 1
 }
+.banner {
+	position: relative;
+	overflow: hidden;
+}
+.banner > img {
+	width: 1920px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -960px;
+}
