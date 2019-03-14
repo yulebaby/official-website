@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>初之光</title>
+	<meta content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+	<link rel="stylesheet" href="./dist/base.css">
+	<link rel="stylesheet" href="./dist/main.css">
+
+	<link rel="stylesheet" href="./dist/about.css">
+</head>
+<body>
+	<!-- header start -->
+	<div class="header">
+		<div class="header-content">
+			<div class="logo"><img src="./images/logo.png" alt="初之光"></div>
+			<div class="nav">
+				<ul>
+					<li><a href="./index.html">首页</a></li>
+					<li class="active"><a href="javascript:;">关于初之光</a></li>
+					<li><a href="./service.html">托育服务</a></li>
+					<li><a href="./index.html">托育目标</a></li>
+					<li><a href="./appint.html">预约参观</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- banner start -->
+	<div class="banner"><img src="./images/about/banner.png" alt="初之光"></div>
+
+	<div class="title"></div>
+
+	<div class="desc"> 我们引进日本及台湾地区先进育儿理念，融会国内外婴幼儿领域权威理论；为孩子提供五星级托育环境设施和起居照护，让孩子们能够在美好的空间和细心地呵护中健康快乐地成长。 我们与各界专家合作，专为0-3岁婴幼儿设计潜能开发课程，透过丰富的课程与活动启迪孩子的天赋，不断激发孩子的好奇心和想象力，让他们能够适性发展、自信成长。 我们为年轻的父母提供专业的育儿指导、情绪管理及身心疗愈课程；为渴望独立的女性提供育儿帮助和交流平台，以最大程度地帮助家长实现轻松育儿和自我价值。</div>
+
+	<div class="people">
+		<ul class="clear">
+			<li>
+				<img src="./images/about/ls1.png" alt="初之光">
+				<div class="introd"><h4>田青（初之光创始人）</h4><h6>北大光华管理学院</h6></div>
+				<p> 曾任北京大学光华管理学院对外关系部副主任、长江商学院EMBA项目华北地区市场与招生负责人，混沌大学创新商学院联合创办人。</p>
+			</li>
+			<li>
+				<img src="./images/about/ls2.png" alt="初之光">
+				<div class="introd"><h4>曾麒玥（初之光创始人）</h4><h6>清华公共管理学院</h6></div>
+				<p> 清华大学博士后、浙江大学与美国波士顿大学联合培养哲学博士。先后在清华附中和清华大学担任教职，对中西方哲学、教育学、心理学、美学等有深入研究。</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="advertising" id="viewBox"><img id="scrollImg" src="./images/about/advertising.png" alt="初之光"></div>
+
+	<div class="introduce"></div>
+
+	<div class="baby clear">
+		<div class="baby-bg lf"><img src="./images/about/baby1.png" alt="初之光"></div>
+		<ul>
+			<li>
+				<img src="./images/about/baby2.png" alt="初之光">
+				<div>
+					<img src="./images/about/baby.png" alt="">
+					<h2>我们的宗旨</h2>
+					<p>培养有文化底蕴的创造者</p>
+				</div>
+			</li>
+			<li class="active">
+				<img src="./images/about/baby3.png" alt="初之光">
+				<div>
+					<img src="./images/about/baby.png" alt="">
+					<h2>我们的目标</h2>
+					<p>健康的体魄、灵活的思维、<br>独立的人格</p>
+				</div>
+			</li>
+			<li>
+				<img src="./images/about/baby4.png" alt="初之光">
+				<div>
+					<img src="./images/about/baby.png" alt="">
+					<h2>我们的保障</h2>
+					<p>强大的专家团队、专业的<br>教师队伍、安全美好的环境</p>
+				</div>
+			</li>
+		</ul>
+		<div class="baby-bg rf"><img src="./images/about/baby5.png" alt="初之光"></div>
+	</div>
+
+
+	<!-- footer start -->
+	<div class="footer">
+		<div class="logo-footer"><img src="./images/logo_footer.png" alt="初之光"></div>
+		<p>京ICP备18064833号<span>copyright@2018 www.wislightgroup.com, All Rights Reserved.</span></p>
+	</div>
+
+    <script src="./dist/plugins/jquery.js"></script>
+	<script>
+		var img = document.getElementById('scrollImg'),
+			viewOffsetTop = document.getElementById('viewBox').offsetTop,
+			clientHeight = document.documentElement.clientHeight || document.body.clientHeight,
+			viewHeight = 320,
+			scollHeight = 980;
+		document.body.onscroll = function (e) {
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			var inHg = scrollTop + clientHeight >= viewOffsetTop;
+			if (inHg && scrollTop <= viewOffsetTop + viewHeight) {
+				var b = (scrollTop + clientHeight - viewOffsetTop - 440) / 1410 * 100;
+				img.style.transform = 'translate3d(0, -' + b + '%, 0)';
+			}
+		}
+		$(function () {
+			$('.baby li').on('mouseover', function () {
+				$(this).addClass('active').siblings().removeClass('active')
+			})
+		})
+	</script>
+</body>
+</html>

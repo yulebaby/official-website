@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>初之光</title>
+	<meta content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+	<link rel="stylesheet" href="./dist/base.css">
+	<link rel="stylesheet" href="./dist/main.css">
+
+    <link rel="stylesheet" href="./dist/datepicker.css">
+	<link rel="stylesheet" href="./dist/index.css">
+</head>
+<body>
+	<!-- header start -->
+	<div class="header">
+		<div class="header-content">
+			<div class="logo"><img src="./images/logo.png" alt="初之光"></div>
+			<div class="nav">
+				<ul>
+					<li class="active"><a href="javascript:;">首页</a></li>
+					<li><a href="./about.html">关于初之光</a></li>
+					<li><a href="./service.html">托育服务</a></li>
+					<li><a href="javascript:;" id="scrollTop">托育目标</a></li>
+					<li><a href="./appint.html">预约参观</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- banner start -->
+	<div class="banner"><img src="./images/banner.png" alt="初之光"></div>
+
+	<div class="content">
+		<div class="content-main">
+			<h2>初之光国际婴幼儿托育中心</h2>
+			<h6>Wislight International Babycare Center</h6>
+			<p>我们引进日本及台湾地区先进育儿理念，融会国内外婴幼儿领域权威理论；为孩子提供五星级托育环境设施和起居照护，让孩子们能够在美好的空间和细心地呵护中健康快乐地成长。</p>
+			<a href="./about.html">了解更多</a>
+		</div>
+	</div>
+
+	<div class="section">
+		<h2>初之光托育目标</h2>
+		<ul class="clear">
+			<li>
+				<img src="./images/index/section1.png" alt="初之光">
+				<p>健康的体魄</p>
+			</li>
+			<li>
+				<img src="./images/index/section2.png" alt="初之光">
+				<p>灵活的思维</p>
+			</li>
+			<li>
+				<img src="./images/index/section3.png" alt="初之光">
+				<p>独立的人格</p>
+			</li>
+		</ul>
+	</div>
+	<div class="title"></div>
+
+	<div class="baby">
+		<ul>
+			<li>
+				<img src="./images/index/baby1.png" alt="初之光">
+				<div>
+					<h4>安全守护</h4>
+					<p>有机均衡膳食、欧盟标准环境、实时视讯系统、PM2.5新风系统、双门禁安全保障</p>
+				</div>
+			</li>
+			<li class="active">
+				<img src="./images/index/baby2.png" alt="初之光">
+				<div>
+					<h4>科学照护</h4>
+					<p>分月成长检核、专业育儿老师、多元早教课程、科学规律作息、保健医生全日守护、台湾专业保育系统。</p>
+				</div>
+			</li>
+			<li>
+				<img src="./images/index/baby3.png" alt="初之光">
+				<div>
+					<h4>家园共护</h4>
+					<p>定期亲师沟通、家长课堂分享、玩趣亲子活动、一对一成长守护、家园互动管理体系。</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="form">
+		<ul>
+			<li><input type="text" placeholder="请输入宝宝昵称" id="babyName"></li>
+			<li class="birthday"><input type="text" placeholder="请输入宝宝年龄" readonly id="birthday"></li>
+			<li><input type="text" placeholder="请输入家长电话" id="phone"></li>
+			<li><a href="javascript:;" id="submit">立即预约</a></li>
+			<li id="error"></li>
+		</ul>
+	</div>
+
+
+	<!-- footer start -->
+	<div class="footer">
+		<div class="logo-footer"><img src="./images/logo_footer.png" alt="初之光"></div>
+		<p>京ICP备18064833号<span>copyright@2018 www.wislightgroup.com, All Rights Reserved.</span></p>
+	</div>
+    <script src="./dist/plugins/jquery.js"></script>
+    <script src="./dist/plugins/moment.min.js"></script>
+	<script src="./dist/datepicker.all.js"></script>
+	<script src="./dist/form.js"></script>
+	<script>
+		$(function () {
+			$('.baby li').on('mouseover', function () {
+				$(this).addClass('active').siblings().removeClass('active')
+			})
+		})
+	</script>
+</body>
+</html>

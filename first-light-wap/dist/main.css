@@ -1,0 +1,135 @@
+body {
+	background: #fff;
+}
+.header {
+	height: 55px;
+	line-height: 55px;
+	padding: 10px 17px;
+}
+.logo {
+	height: 35px;
+	float: left;
+}
+.logo img {
+	height: 100%;
+}
+.nav-btn {
+	padding: 3px;
+	width: 28px;
+	height: 22px;
+	position: absolute;
+	top: 15px;
+	right: 17px;
+	z-index: 9;
+}
+.nav-btn img {
+	width: 100%;
+	height: 100%;
+}
+.nav-btn:active {
+	background: #f8f8f8;
+}
+.nav-box {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 55px;
+	left: 0;
+	z-index: 8;
+	opacity: 0;
+	visibility: hidden;
+}
+.nav-box.active {
+	opacity: 1;
+	visibility: visible;
+}
+.nav-box.active .nav {
+	transform: none;
+}
+.nav {
+	width: 100%;
+	background: #f8f8f8;
+	border-top: solid 1px #e8e8e8;
+	border-bottom: solid 1px #e8e8e8;
+	transform: translate3d(0, -100%, 0);
+	transition: all .25s;
+}
+.nav li.active {
+	color: #F6C639;
+}
+.nav li a {
+	display: block;
+	margin: 0 .2rem;
+}
+
+.banner img {
+	width: 100%;
+}
+
+.footer {
+	margin-top: 15px;
+	padding-bottom: 7px;
+	text-align: center;
+	overflow: hidden;
+}
+.logo-footer {
+	height: 50px;
+	position: relative;
+}
+.logo-footer::before {
+	display: block;
+	content: '';
+	width: 750px;
+	height: 1px;
+	background: #F0F0F0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -375px;
+}
+.logo-footer::after {
+	display: block;
+	content: '';
+	width: 100px;
+	height: 1px;
+	background: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -50px;
+}
+.logo-footer > img {
+	height: 100%;
+	display: inline-block;
+	position: relative;
+	z-index: 9;
+}
+.footer > p {
+	margin-top: 22px;
+	color: #9B9B9B;
+	font-size: 10px;
+	line-height: 14px;
+}
+.footer > p > span {
+	display: block;
+	line-height: 20px;
+}
+
+input[type="date"] {
+	position: relative;
+    background-color:transparent;  
+    color:#fff;  
+    FILTER: alpha(opacity=0); /*androd*/  
+    appearance:none;  /*下拉框去掉右侧图标*/  
+    -moz-appearance:none;  
+    -webkit-appearance:none;  
+}
+input[type="date"]:before{
+	display: block;
+	color: #999;
+    content:attr(placeholder);
+}
+input[type="date"].full:before {
+    color:black;
+    content:""!important;
+}

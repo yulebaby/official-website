@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>初之光</title>
+	<meta content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+	<script>
+		(function (doc, win) {
+		    var docEl = doc.documentElement,
+		        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		        recalc = function () {
+		            var clientWidth = docEl.clientWidth;
+		            if (!clientWidth) return;
+		            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		        };
+		 
+		    // Abort if browser does not support addEventListener
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, recalc, false);
+		    doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<link rel="stylesheet" href="./dist/base.css">
+	<link rel="stylesheet" href="./dist/main.css">
+
+	<link rel="stylesheet" href="./dist/index.css">
+	<link rel="stylesheet" href="./dist/rolldate.css">
+</head>
+<body>
+	<!-- header start -->
+	<div class="header">
+		<div class="logo"><img src="./images/logo.png" alt="初之光"></div>
+		<div class="nav-btn"><img src="./images/nav-btn.png" alt="初之光"></div>
+		<div class="nav-box">
+			<div class="nav">
+				<ul>
+					<li class="active"><a href="javascript:;">首页</a></li>
+					<li><a href="./about.html">关于初之光</a></li>
+					<li><a href="./service.html">托育服务</a></li>
+					<li><a href="javascript:;" id="scrollTop">托育目标</a></li>
+					<li><a href="./appint.html">预约参观</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- banner start -->
+	<div class="banner"><img src="./images/index/banner.png" alt="初之光"></div>
+
+	<div class="title"></div>
+
+	<div class="content">
+		<div>
+			<h2>初之光国际婴幼儿托育中心</h2>
+			<h4>Wislight International Babycare Center</h4>
+			<p> 我们引进日本及台湾地区先进育儿理念，融会国内外婴幼儿领域权威理论；为孩子提供五星级托育环境设施和起居照护，让孩子们能够在美好的空间和细心地呵护中健康快乐地成长。</p>
+			<a href="./about.html">了解更多</a>
+		</div>
+	</div>
+
+	<h2>初之光托育目标</h2>
+
+	<div class="flex">
+		<ul>
+			<li>
+				<div><img src="./images/index/flex1.png" alt="初之光"></div>
+				<p>健康的体魄</p>
+			</li>
+			<li>
+				<div><img src="./images/index/flex2.png" alt="初之光"></div>
+				<p>灵活的思维</p>
+			</li>
+			<li>
+				<div><img src="./images/index/flex3.png" alt="初之光"></div>
+				<p>独立的人格</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="desc"><img src="./images/index/title2.png" alt="初之光"></div>
+
+	<div class="list">
+		<img src="./images/index/list1.png" alt="初之光">
+		<img src="./images/index/list2.png" alt="初之光">
+		<img src="./images/index/list3.png" alt="初之光">
+	</div>
+
+	<div class="form">
+		<h2>愿每一个宝宝都能光芒绽放</h2>
+		<ul>
+			<li><input type="text" placeholder="宝宝昵称" id="babyName"></li>
+			<li><input type="text" placeholder="宝宝生日" id="birthday"></li>
+			<li><input type="text" placeholder="家长电话" id="phone"></li>
+			<li><a href="javascript:;" id="submit">立即预约</a></li>
+		</ul>
+		<div class="error" id="error"></div>
+	</div>
+
+	<!-- footer start -->
+	<div class="footer">
+		<div class="logo-footer"><img src="./images/logo-footer.png" alt="初之光"></div>
+		<p>京ICP备18064833号<span>copyright@2018 www.wislightgroup.com, All Rights Reserved.</span></p>
+	</div>
+	<script src="./dist/jquery.js"></script>
+	
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+	<script src="./dist/main.js"></script>
+	<script src="./dist/rolldate.min.js"></script>
+	<script>
+	  new rolldate.Date({
+	 	el:'#birthday',
+		format:'YYYY-MM-DD',
+		endYear:2020,
+		confirmBefore:function(el,date){
+			var d = new Date(),
+				d1 = new Date(date.replace(/\-/g, "\/")),
+				d2 = new Date(d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate());//如果非'YYYY-MM-DD'格式，需要另做调整
+
+			if(d1 > d2){
+				alert('请选择正确的生日');
+				return false;
+			}
+		}
+	  })
+	</script>
+</body>
+</html>

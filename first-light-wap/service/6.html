@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>初之光</title>
+	<meta content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+	<script>
+		(function (doc, win) {
+		    var docEl = doc.documentElement,
+		        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		        recalc = function () {
+		            var clientWidth = docEl.clientWidth;
+		            if (!clientWidth) return;
+		            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		        };
+		 
+		    // Abort if browser does not support addEventListener
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, recalc, false);
+		    doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<link rel="stylesheet" href="./../dist/base.css">
+	<link rel="stylesheet" href="./../dist/main.css">
+
+	<link rel="stylesheet" href="./../dist/service.css">
+</head>
+<body>
+	<!-- header start -->
+	<div class="header">
+		<div class="logo"><img src="./../images/logo.png" alt="初之光"></div>
+		<div class="nav-btn"><img src="./../images/nav-btn.png" alt="初之光"></div>
+		<div class="nav-box">
+			<div class="nav">
+				<ul>
+					<li><a href="./../index.html">首页</a></li>
+					<li><a href="./../about.html">关于初之光</a></li>
+					<li class="active"><a href="./../service.html">托育服务</a></li>
+					<li><a href="./../index.html">托育目标</a></li>
+					<li><a href="./../appint.html">预约参观</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- banner start -->
+	<div class="banner"><img src="./../images/service/banner1.png" alt="初之光"></div>
+
+
+	<div class="content hd">
+		<ul class="clear">
+			<li>
+				<img src="./../images/service/hd1.png" alt="初之光">
+				<div class="lf" style="width: 3.2rem;">
+					<h2>细致记录</h2>
+					<p>我们的老师每天都会在系统里记录宝宝喝奶、饮水、吃饭、睡眠、运动、换尿布等各项数据，便于家长了解宝宝的一日状态。</p>
+				</div>
+			</li>
+			<li>
+				<img src="./../images/service/hd2.png" alt="初之光">
+				<div class="rf" style="width: 3.6rem;">
+					<h2>精彩分享</h2>
+					<p>老师们会随时拍摄宝宝们在园的日常和精彩 有趣的瞬间，并每天上传至系统，帮助孩子记录美好。</p>
+				</div>
+			</li>
+			<li>
+				<img src="./../images/service/hd3.png" alt="初之光">
+				<div class="lf" style="width: 3.6rem;">
+					<h2>全面互动</h2>
+					<p>家长可随时登陆，提醒需要老师注意的事项， 分享宝宝在园所之外的成长，并可随时发起或参与老师的交流，更好地实现家园共育。</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<!-- footer start -->
+	<div class="footer">
+		<div class="logo-footer"><img src="./../images/logo-footer.png" alt="初之光"></div>
+		<p>京ICP备18064833号<span>copyright@2018 www.wislightgroup.com, All Rights Reserved.</span></p>
+	</div>
+	<script src="https://zeptojs.com/zepto.min.js"></script>
+	<script src="./../dist/main.js"></script>
+</body>
+</html>

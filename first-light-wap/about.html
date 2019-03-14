@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>初之光</title>
+	<meta content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+	<script>
+		(function (doc, win) {
+		    var docEl = doc.documentElement,
+		        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		        recalc = function () {
+		            var clientWidth = docEl.clientWidth;
+		            if (!clientWidth) return;
+		            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		        };
+		 
+		    // Abort if browser does not support addEventListener
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, recalc, false);
+		    doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<link rel="stylesheet" href="./dist/base.css">
+	<link rel="stylesheet" href="./dist/main.css">
+
+	<link rel="stylesheet" href="./dist/about.css">
+</head>
+<body>
+	<!-- header start -->
+	<div class="header">
+		<div class="logo"><img src="./images/logo.png" alt="初之光"></div>
+		<div class="nav-btn"><img src="./images/nav-btn.png" alt="初之光"></div>
+		<div class="nav-box">
+			<div class="nav">
+				<ul>
+					<li><a href="./index.html">首页</a></li>
+					<li class="active"><a href="javascript:;">关于初之光</a></li>
+					<li><a href="./service.html">托育服务</a></li>
+					<li><a href="./index.html">托育目标</a></li>
+					<li><a href="./appint.html">预约参观</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- banner start -->
+	<div class="banner"><img src="./images/about/banner.png" alt="初之光"></div>
+
+	<div class="title"></div>
+
+	<div class="content">
+		<h1>关于初之光</h1>
+		<h4>初之光国际婴幼儿托育中心<br>Wislight International Babycare Center<br>一家专业五星级婴幼儿托育机构</h4>
+		<p>我们引进日本及台湾地区先进育儿理念，融会国内外婴幼儿领域权威理论；为孩子提供五星级托育环境设施和起居照护，让孩子们能够在美好的空间和细心地呵护中健康快乐地成长。</p>
+	</div>
+
+	<div class="people">
+		<ul>
+			<li>
+				<img src="./images/about/ls1.png" alt="初之光">
+				<div class="introd"><h4>田青（初之光创始人）</h4><h6>北大光华管理学院</h6></div>
+				<p>曾任北京大学光华管理学院对外关系部副主任、长江商学院EMBA项目华北地区市场与招生负责人，混沌大学创新商学院联合创办人。</p>
+			</li>
+			<li>
+				<img src="./images/about/ls2.png" alt="初之光">
+				<div class="introd"><h4>曾麒玥（初之光创始人）</h4><h6>清华公共管理学院</h6></div>
+				<p> 清华大学博士后、浙江大学与美国波士顿大学联合培养哲学博士。先后在清华附中和清华大学担任教职，对中西方哲学、教育学、心理学、美学等有深入研究。</p>
+			</li>
+		</ul>
+	</div>
+
+
+	<div class="advertising" id="viewBox"><img id="scrollImg" src="./images/about/advertising.png" alt="初之光"></div>
+
+	<div class="cell"><img src="./images/about/title2.png" alt="初之光"></div>
+
+	<div class="list">
+		<ul>
+			<li>
+				<img src="./images/about/list1.png" alt="初之光">
+				<div class="rf">
+					<h2>我们的宗旨</h2>
+					<h4>培养有文化底蕴的创造者</h4>
+				</div>
+			</li>
+			<li>
+				<img src="./images/about/list2.png" alt="初之光">
+				<div class="lf">
+					<h2>我们的目标</h2>
+					<h4>健康的体魄、灵活的思维<br>独立的人格</h4>
+				</div>
+			</li>
+			<li>
+				<img src="./images/about/list3.png" alt="初之光">
+				<div class="rf">
+					<h2>我们的保障</h2>
+					<h4>强大的专家团队、专业的<br>教师队伍、安全美好的环境</h4>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- footer start -->
+	<div class="footer">
+		<div class="logo-footer"><img src="./images/logo-footer.png" alt="初之光"></div>
+		<p>京ICP备18064833号<span>copyright@2018 www.wislightgroup.com, All Rights Reserved.</span></p>
+	</div>
+	<script src="./dist/jquery.js"></script>
+	<script src="./dist/main.js"></script>
+
+	<script>
+		var img = document.getElementById('scrollImg'),
+			viewOffsetTop = document.getElementById('viewBox').offsetTop,
+			clientHeight = document.documentElement.clientHeight || document.body.clientHeight,
+			viewHeight = 120,
+			scollHeight = 49;
+		document.body.onscroll = function (e) {
+			var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+			var inHg = scrollTop + clientHeight >= viewOffsetTop;
+			if (inHg && scrollTop <= viewOffsetTop + viewHeight) {
+				var b = (scrollTop + clientHeight - viewOffsetTop - 700) / 705 * 100;
+				img.style.transform = 'translate3d(0, -' + b + '%, 0)';
+			}
+		}
+	</script>
+</body>
+</html>

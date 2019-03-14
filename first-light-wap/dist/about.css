@@ -1,0 +1,147 @@
+.title {
+	height: 2.17rem;
+	background: url('./../images/about/title1.png') no-repeat center;
+	background-size: 7.5rem 1.25rem;
+	position: relative;
+	margin-top: -.22rem;
+}
+.content {
+	padding: 0 .35rem;
+	text-align: center;
+	position: relative;
+	margin-top: -.85rem;
+}
+.content h1 {
+	font-size: .34rem;
+	line-height: .48rem;
+	margin-bottom: .1rem;
+}
+.content h4 {
+	font-size: .24rem;
+	line-height: .33rem;
+}
+.content h4::after {
+	display: block;
+	content: '';
+	margin: .2rem auto .3rem;
+	width: .7rem;
+	height: .06rem;
+	background: #F6C639;
+}
+.content p {
+	color: #4A4A4A;
+	font-size: .24rem;
+	line-height: .36rem;
+	text-indent: .4rem;
+	text-align: left;
+}
+.content p:not(:last-child) {
+	margin-bottom: .24rem;
+}
+
+.people {
+	padding: .3rem .35rem .7rem;
+}
+.people ul {
+	display: flex;
+}
+.people li {
+	flex: 1;
+}
+.people li:first-child {
+	margin-right: .2rem;
+}
+.people li img {
+	width: 100%;
+	height: 4rem;
+}
+.people li > div {
+	height: 1.7rem;
+	padding: .38rem 0 .38rem .4rem;
+	background: url('./../images/about/cell-bg.png') no-repeat center;
+	background-size: contain;
+	position: relative;
+	margin-top: -.5rem;
+}
+.people li h4 {
+	font-size: .24rem;
+	line-height: .33rem;
+	margin-bottom: .05rem;
+}
+.people li h6 {
+	color: #979797;
+	font-size: .2rem;
+	line-height: .28rem;
+}
+.people li p {
+	color: #4A4A4A;
+	font-size: .2rem;
+	line-height: .28rem;
+	text-indent: .4rem;
+}
+
+.advertising {
+	height: 2.42rem;
+	overflow: hidden;
+	position: relative;
+}
+.advertising > img {
+	width: 7.5rem;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -3.75rem;
+}
+.cell img {
+	width: 100%;
+}
+.list {
+	padding: .42rem .25rem .08rem;
+}
+.list li {
+	position: relative;
+}
+.list li img {
+	width: 100%;
+}
+.list li > div {
+	position: absolute;
+	top: .93rem;
+}
+.list li > div.lf {
+	text-align: right;
+	right: 50%;
+	margin-right: .45rem;
+}
+.list li > div.rf {
+	left: 50%;
+	margin-left: .45rem;
+}
+.list li h2 {
+	color: #4A4A4A;
+	font-size: .28rem;
+	line-height: .4rem;
+	margin-bottom: .1rem;
+}
+.list li h4 {
+	color: #9B9B9B;
+	font-size: .2rem;
+	line-height: .28rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

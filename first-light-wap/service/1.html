@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>初之光</title>
+	<meta content="width=device-width, minimum-scale=1, initial-scale=1, maximum-scale=1, user-scalable=1" name="viewport">
+	<script>
+		(function (doc, win) {
+		    var docEl = doc.documentElement,
+		        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		        recalc = function () {
+		            var clientWidth = docEl.clientWidth;
+		            if (!clientWidth) return;
+		            docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+		        };
+		 
+		    // Abort if browser does not support addEventListener
+		    if (!doc.addEventListener) return;
+		    win.addEventListener(resizeEvt, recalc, false);
+		    doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+	</script>
+	<link rel="stylesheet" href="./../dist/base.css">
+	<link rel="stylesheet" href="./../dist/main.css">
+
+	<link rel="stylesheet" href="./../dist/service.css">
+</head>
+<body>
+	<!-- header start -->
+	<div class="header">
+		<div class="logo"><img src="./../images/logo.png" alt="初之光"></div>
+		<div class="nav-btn"><img src="./../images/nav-btn.png" alt="初之光"></div>
+		<div class="nav-box">
+			<div class="nav">
+				<ul>
+					<li><a href="./../index.html">首页</a></li>
+					<li><a href="./../about.html">关于初之光</a></li>
+					<li class="active"><a href="./../service.html">托育服务</a></li>
+					<li><a href="./../index.html">托育目标</a></li>
+					<li><a href="./../appint.html">预约参观</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- banner start -->
+	<div class="banner"><img src="./../images/service/banner1.png" alt="初之光"></div>
+
+
+	<div class="content">
+		<ul class="clear">
+			<li class="lf">
+				<img src="./../images/service/hj1.png" alt="初之光">
+				<div style="width: 3.88rem;">
+					<h2>环境设计</h2>
+					<p>我们坚持提供以孩子为中心的成长空间。 我们所有的教室都有良好的采光和通风， 具备适宜的温度和湿度； </p>
+				</div>
+			</li>
+			<li class="rf">
+				<img src="./../images/service/hj2.png" alt="初之光">
+				<div style="width: 3.3rem;">
+					<h2>环境卫生</h2>
+					<p>我们安装过滤PM2.5且每个空间各自 独立的新风系统，对空气质量进行严格把控，将环境致病因素和过敏源的危害降至最低。</p>
+				</div>
+			</li>
+			<li class="lf">
+				<img src="./../images/service/hj3.png" alt="初之光">
+				<div style="width: 4.11rem;">
+					<h2>环境安全</h2>
+					<p>我们严格遵照「中华人民共和国消防法」和「建筑内部装修设计防火规范」 建设环境，完全达到一级耐燃性能检验的标准。</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<!-- footer start -->
+	<div class="footer">
+		<div class="logo-footer"><img src="./../images/logo-footer.png" alt="初之光"></div>
+		<p>京ICP备18064833号<span>copyright@2018 www.wislightgroup.com, All Rights Reserved.</span></p>
+	</div>
+	<script src="https://zeptojs.com/zepto.min.js"></script>
+	<script src="./../dist/main.js"></script>
+</body>
+</html>
