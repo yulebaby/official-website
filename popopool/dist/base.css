@@ -149,4 +149,24 @@ footer {
 	text-align: center;
 	background: #E76792;
 }
-
+.fixed {
+	width: 57px;
+	position: fixed;
+	right: 0;
+	bottom: 200px;
+}
+.fixed li {
+	margin-bottom: 11px;
+	position: relative;
+}
+.fixed li div {
+	width: 193px;
+	position: absolute;
+	top: 10px;
+	left: 0;
+	margin-left: -193px;
+	opacity: 0;
+}
+.fixed li:hover div {
+	opacity: 1
+}
