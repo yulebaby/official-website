@@ -431,3 +431,76 @@ body > footer {
 .copyright span {
 	margin-left: 30px;
 }
+.system {
+	background: #7ECEF4;
+}
+.system h2 {
+	color: #fff;
+}
+.system ul {
+	margin: 0 auto 50px;
+}
+.system ul li {
+	width: 190px;
+	text-align: center;
+}
+.system ul li img {
+	display: inline-block;
+	width: 128px;
+	margin-bottom: 16px;
+}
+.system ul li h4 {
+	color: #fff;
+	font-size: 18px;
+	line-height: 25px;
+	margin-bottom: 5px;
+}
+.system ul li p {
+	color: #fff;
+	font-size: 14px;
+	line-height: 20px;
+}
+.system ul li:not(:last-child) {
+	margin-right: 10px;
+}
+.system ol {
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+}
+.system ol li {
+	display: inline-block;
+	width: 320px;
+}
+.system ol li:not(:last-child) {
+	margin-right: 20px;
+}
+
+.process {
+
+}
+.process .c {
+	text-align: center;
+}
+.process .c img {
+	display: inline-block;
+	width: 30px;
+}
+.process .c p {
+	display: inline-block;
+	width: 170px;
+	color: #4A4A4A;
+	font-size: 18px;
+	vertical-align: top;
+	margin-top: 11px;
+}
+.process .b {
+	width: 1000px;
+	text-align: right;
+	margin: 48px auto 30px;
+}
+.process .b img {
+	display: inline-block;
+	width: 48px;
+	margin-right: 66px;
+}

@@ -56,7 +56,8 @@ $.ajax({
 			timestamp: result.timestamp, // 必填，生成签名的时间戳
 			nonceStr: result.nonceStr, // 必填，生成签名的随机串
 			signature: result.signature,// 必填，签名
-			jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] // 必填，需要使用的JS接口列表
+			// jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'updateAppMessageShareData', 'updateTimelineShareData'] 
+			jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage'] 
 		});
 	}
 });
@@ -73,4 +74,15 @@ wx.ready(function(){
 	    link: location.href.split('#')[0],
 	    imgUrl: 'https://ylbb-system.oss-cn-beijing.aliyuncs.com/wislight.jpg'	
 	});
+ //  wx.updateAppMessageShareData({
+	//     title: 'Wislight初之光国际婴幼儿托育中心',
+	//     link: location.href.split('#')[0],
+	//     imgUrl: 'https://ylbb-system.oss-cn-beijing.aliyuncs.com/wislight.jpg'
+	// });
+	// wx.updateTimelineShareData({
+	//     title: 'Wislight初之光国际婴幼儿托育中心',
+	// 		desc: '专业五星级婴幼儿托育机构致力于为0-3岁宝宝提供科学的照顾和系统的引导教育', // 分享描述
+	//     link: location.href.split('#')[0],
+	//     imgUrl: 'https://ylbb-system.oss-cn-beijing.aliyuncs.com/wislight.jpg'	
+	// });
 });

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>泡泡塘-智能测评</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<link rel="stylesheet" href="./dist/base.css">
+	<script src="./dist/base.js"></script>
+	<style>
+		.banner { height: 600px; }
+		body > h2 { color: #E76792; font-size: 30px; line-height: 1; text-align: center; margin: 71px 0 78px; position: relative; }
+		body > h2::after { content: ''; display: block; width:44px; height:2px; background: #E76792; position: absolute; left: 50%; bottom: 0; margin-bottom: -18px; margin-left: -22px;}
+		.list { width: 1200px; margin: 0 auto 120px; }
+		.list li { width: 230px; float: left;  position: relative; }
+		.list li:nth-child(even) { margin-top: 148px; }
+		.list li:not(:last-child) { margin-right: 12px }
+		.list li h2 { width: 100%; color: #fff; font-size: 20px; line-height: 1; text-align: center; position: absolute; left: 0; top: 29px; }
+		.list li:nth-child(even) h2 { bottom: 101px; top: auto; }
+		.list li p { width: 200px; color: #444; font-size: 14px; line-height: 24px; position: absolute; left: 15px; top: 162px; }
+		.list li:nth-child(even) p { top: 14px; }
+		.form { width: 1200px; height: 600px; margin: 0 auto 140px; background: url('./images/form-evaluating.png') no-repeat center; position: relative; }
+		.form ul { width: 440px; position: absolute; bottom: 0; left: 50%; margin-left: -220px; }
+		.form h2 { color: #fff; font-size: 26px; text-align: center; line-height: 1; margin-bottom: 24px; }
+		.form li { margin-bottom: 15px; overflow: hidden; position: relative; }
+		.form li span { display: block; float: left; color: #fff; font-size: 18px; line-height: 42px; }
+		.form li div { background: #fff; float: right; width: 350px; height: 42px; }
+		.form li input { width: 100%; padding: 0 16px; height: 30px; line-height: 30px; margin-top: 6px; border: 0; outline: none; }
+		.get-code { display: block; width: 146px; position: absolute; top: 0; right: 0; z-index: 1; color: #ffff; font-size: 18px; line-height: 42px; text-align: center; background: #EB6EA5; }
+		.get-code.active { pointer-events: none; background: #B5B5B5; }
+		.submit { display: block; color: #ffff; font-size: 18px; line-height: 42px; text-align: center; background: #EB6EA5; }
+	</style>
+</head>
+<body>
+	<header>
+		<div class="header">
+			<div class="logo"><img src="./images/logo.png" alt="泡泡塘"></div>
+			<nav>
+				<ul>
+					<li ><a href="index.html">首页</a></li>
+					<li><a href="aboutUs.html">关于我们</a></li>
+					<li><a href="chanpin.html">产品中心</a></li>
+					<li><a href="tixi.html">课程体系</a></li>
+					<li><a href="education.html">水育中心</a></li>
+					<li  class="active"><a href="evaluating.html">智能评测</a></li>
+				</ul>
+			</nav>
+			<div class="home">
+				<ul>
+					<li>
+						<a href="joinin.html">
+							<img src="./images/icon-home.png" alt="泡泡塘">
+							<span>我要加盟</span>
+						</a>
+						<div class="phone">加盟咨询：400-055-6356</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="fixed">
+		<ul>
+			<!-- <li><a href="javascript:;"><img src="./images/icon-zixun.png" alt="泡泡塘"></a></li> -->
+			<li>
+				<a href="javascript:;"><img src="./images/icon-tel.png" alt="泡泡塘"></a>
+				<div><img src="./images/fixed-tel.png" alt="泡泡塘"></div>
+			</li>
+		</ul>
+	</div>
+
+
+	<div class="banner"><img src="./images/banner-evaluating.png" alt="泡泡塘"></div>
+
+	<h2>儿童大智能</h2>
+
+	<div class="list">
+		<ul class="clear">
+			<li>
+				<img src="./images/e1.png" alt="泡泡塘">
+				<h2>大运动</h2>
+				<p>身体的姿势是由身体各大肌肉控制的活动,如:俯卧、抬头、坐、站、爬、走、跑等。正常儿童出生后第一年大运动发展很快。是神经系统发育的一个重要标志，是生存和发展的基本能力，与心理、智能的发展密切相关，是促进幼儿身心发展的有效手段，为其他方面的发展打下良好的基础</p>
+			</li>
+			<li>
+				<img src="./images/e2.png" alt="泡泡塘">
+				<h2>精细动作</h2>
+				<p>个体主要凭借手以及手指等部位的小肌肉或小肌肉群的运动，在感知觉、注意等多方面心理活动的配合下完成特定任务的能力。对个体生存、自身发展具有重要意义，是多种发展任务的能力基础，与心理、智能的发展密切相关，是评价发展状况的重要指标。</p>
+			</li>
+			<li>
+				<img src="./images/e3.png" alt="泡泡塘">
+				<h2>认知能力</h2>
+				<p>个体认识客观世界的信息加工活动。是感觉、知觉、记忆、想象、思维等认知活动按照一定的关系组成的功能系统。能帮助婴幼儿更好地适应社会，是婴幼儿获得学习能力的途径，是婴幼儿认识外在世界的必经之路，可以实现对幼儿认识活动的调节作用。</p>
+			</li>
+			<li>
+				<img src="./images/e4.png" alt="泡泡塘">
+				<h2>语言能力</h2>
+				<p>婴幼儿交流的重要工具和手段，婴幼儿的语言过程主要包括语言感知、语言理解和语言表达三个方面，以婴幼儿听觉系统、发音器以及大脑神经中枢的发展与成熟为重要的生理基础和必备的前提。具有交际功能，促进社会性的发展，对认识过程具有概括作用，对心理活动和行为具有调节作用，可促进逻辑思维的发展。</p>
+			</li>
+			<li>
+				<img src="./images/e5.png" alt="泡泡塘">
+				<h2>标题</h2>
+				<p>作为社会成员的个体，为适应社会生活所表现出的心理和行为特征。也就是人们为了适应社会生活所形成的符合社会传统习俗的行为方式。是学前儿童社会性情感的需要，影响学前儿童身体、心智的发展，是学前儿童社会性认知的需要，是学前儿童社会交往的需要。</p>
+			</li>
+		</ul>
+	</div>
+
+	<div class="form">
+		<ul>
+			<h2>测评预约</h2>
+			<li>
+				<span>宝宝昵称</span>
+				<div><input type="text" id="customerName"></div>
+			</li>
+			<li>
+				<span>家长手机</span>
+				<div><input type="text" id="tel" maxlength="11"></div>
+			</li>
+			<li>
+				<span>验证码</span>
+				<div style="width: 200px; margin-right: 150px;"><input type="text" id="verifyCode"></div>
+				<a href="javascript:;" class="get-code">获取验证码</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="submit">点击预约</a>
+			</li>
+		</ul>
+	</div>
+
+
+	<footer>
+		<div class="footer">
+			<div class="footer-logo"><img src="./images/logo-footer.png" alt="泡泡塘"></div>
+			<!-- <div class="footer-nav">
+				<ul>
+					<li><a href="javascript:;">工作机会</a></li>
+					<li><a href="javascript:;">联系我们</a></li>
+				</ul>
+			</div> -->
+			<div class="footer-icon">
+				<ul>
+					<li><a href="https://www.toutiao.com/c/user/97067838290/#mid=1602582879118350" target="_blank"><img src="./images/icon-toutiao.png" alt="泡泡塘"></a></li>
+					<li><a href="https://weibo.com/paopaotangshuiyu" target="_blank"><img src="./images/icon-weibo.png" alt="泡泡塘"></a></li>
+					<li><a href="javascript:;" onclick="document.getElementById('qrcode').style.display = 'block'"><img src="./images/icon-wchat.png" alt="泡泡塘"></a></li>
+				</ul>
+			</div>
+			<div class="footer-qrcode" style="display: none;" id="qrcode"><img src="./images/qrcode.png" alt="泡泡塘"></div>
+		</div>
+	</footer>	
+	<div class="copyright">2015-2018 北京市泡泡塘</span></div>
+
+	<script>
+		var submit = document.getElementsByClassName('submit')[0];
+		var getCode =  document.getElementsByClassName('get-code')[0];
+
+		var tel = document.getElementById('tel');
+		var telRegExp = /^((13|14|15|16|17|18|19)[0-9]{1}\d{8})$/;
+		getCode.onclick = function () {
+			if (tel.value && telRegExp.test(tel.value)) {
+				ajax('https://oac.beibeiyue.com/s/toVerifyByPPT', { tel: tel.value }, function() {
+					var time = 60;
+					getCode.classList.add('active')
+					var interval = setInterval(function() {
+						time--;
+						if (time > 0) {
+							getCode.innerText = time + 's后重新获取';
+						} else { clearInterval(interval); getCode.classList.remove('active'); getCode.innerText = '获取验证码' }
+					}, 1000)
+				});
+			} else { alert('请输入正确的手机号'); }
+		}
+
+		submit.onclick = function() {
+			var customerName = document.getElementById('customerName').value,
+					tel = document.getElementById('tel').value,
+					source = '泡泡塘官网',
+					verifyCode = document.getElementById('verifyCode').value;
+			if (!customerName) { alert('请填写姓名'); return; }
+			if (!tel || !telRegExp.test(tel)) { alert('请填写正确的手机号'); return; }
+			if (!verifyCode) { alert('请填写验证码'); return; }
+			ajax('https://oac.beibeiyue.com/s/sendEmailByPPT', { customerName: customerName, tel: tel, source: source, verifyCode: verifyCode }, function(res) {
+				if (res.flag == 0) {
+					document.getElementById('customerName').value = ''
+					document.getElementById('tel').value = ''
+					document.getElementById('verifyCode').value = ''
+				}
+				alert(res.flag == 0 ? '提交成功' : res.flag == 5 ? '验证码校验失败' : '提交失败');
+			})
+		}
+
+		function ajax(url, params, callback) {
+			var body = [];
+			for (var key in params) {
+				body.push(key + '=' + params[key]);
+			}
+			body = body.join('&');
+			var xml = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+			xml.open('post', url, true);
+			xml.setRequestHeader("content-type", "application/x-www-form-urlencoded")
+      xml.send(body);
+      xml.onreadystatechange = function() {
+      	if (xml.readyState == 4 && (xml.status == 200 || xml.status == 304)) {
+      		try{
+      			callback(JSON.parse(xml.responseText))
+      		}catch(err) {
+      			alert('提交失败')
+      		}
+      	}
+      }
+		}
+	</script>
+</body>
+</html>

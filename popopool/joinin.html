@@ -5,6 +5,28 @@
 	<title>泡泡塘-我要加盟</title>
 	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 	<link rel="stylesheet" href="./dist/base.css">
+	<script src="./dist/base.js"></script>
+	<style>
+		.banner { height: 600px; }
+		.form { width: 450px; margin: 70px auto 90px; }
+		.form h2 { color: #E76792; font-size: 36px; line-height: 1; text-align: center; margin-bottom: 50px; }
+		.form h4 { color: #666; font-size: 22px; line-height: 1; text-align: center; margin-bottom: 29px; }
+		.form li { margin-bottom: 50px; position: relative; }
+		.ipt-box { height:65px; background:rgba(246,246,246,1); border-radius:10px; }
+		.form li input { width: 100%; height: 30px; line-height: 30px; font-size: 20px; padding: 0 16px; outline: none; border: none; background: none; margin-top: 17px; text-align: center; }
+		.rdo-box { display: inline-block; width: 50%; text-align: center }
+		.rdo-box label { display: inline-block; line-height: 30px; color: #AEAEAE; font-size: 18px; position: relative; }
+		.rdo-box label::before { content: ''; display: block; width: 30px; height: 30px; background: #F6F6F6; border-radius: 50%; position: absolute; left: 50%; margin-left: -50px; }
+		.rdo-box input[type="radio"] { display: none; }
+		.rdo-box input[type="radio"]:checked + label::before { background: url('./images/icon-radio-true.png') no-repeat center; }
+		.get-code { display: block; line-height: 65px; position: absolute; top: 0; right: 0; color: #E76792; font-size: 20px; }
+		.get-code.active { pointer-events: none; color: #999; }
+		.submit { display: block; height: 65px; color: #fff; background: #E76792; line-height: 65px; text-align: center; font-size: 30px; border-radius: 65px; }
+		.main { background: #F6F6F6; padding: 70px 0 88px; text-align: center }
+		.main h2 { color: #E76792; font-size: 30px; line-height: 1; margin-bottom: 37px; position: relative; }
+		.main h2::after { content: ''; display: block; width:44px; height:2px; background: #E76792; position: absolute; left: 50%; bottom: 0; margin-bottom: -18px; margin-left: -22px;}
+		.main > img { display: inline-block; width: 1242px; }
+	</style>
 </head>
 <body>
 	<header>
@@ -12,24 +34,18 @@
 			<div class="logo"><img src="./images/logo.png" alt="泡泡塘"></div>
 			<nav>
 				<ul>
-					<li class="active"><a href="javascript:;">首页</a></li>
-					<li><a href="javascript:;">关于我们</a></li>
-					<li><a href="javascript:;">产品中心</a></li>
-					<li><a href="javascript:;">课程体系</a></li>
-					<li><a href="javascript:;">水育中心</a></li>
-					<li><a href="javascript:;">智能评测</a></li>
+					<li ><a href="index.html">首页</a></li>
+					<li><a href="aboutUs.html">关于我们</a></li>
+					<li><a href="chanpin.html">产品中心</a></li>
+					<li><a href="tixi.html">课程体系</a></li>
+					<li><a href="education.html">水育中心</a></li>
+					<li><a href="evaluating.html">智能评测</a></li>
 				</ul>
 			</nav>
 			<div class="home">
 				<ul>
 					<li>
-						<a href="javascript:;">
-							<img src="./images/icon-search.png" alt="泡泡塘">
-							<span>中心查询</span>
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
+						<a href="joinin.html">
 							<img src="./images/icon-home.png" alt="泡泡塘">
 							<span>我要加盟</span>
 						</a>
@@ -41,7 +57,7 @@
 	</header>
 	<div class="fixed">
 		<ul>
-			<li><a href="javascript:;"><img src="./images/icon-zixun.png" alt="泡泡塘"></a></li>
+			<!-- <li><a href="javascript:;"><img src="./images/icon-zixun.png" alt="泡泡塘"></a></li> -->
 			<li>
 				<a href="javascript:;"><img src="./images/icon-tel.png" alt="泡泡塘"></a>
 				<div><img src="./images/fixed-tel.png" alt="泡泡塘"></div>
@@ -50,31 +66,132 @@
 	</div>
 
 
+	<div class="banner"><img src="./images/banner-join.png" alt="泡泡塘"></div>
 
-	<div class="banner"></div>
+	<div class="form">
+		<h2>我要加盟</h2>
+		<ul>
+			<li>
+				<h4>姓名</h4>
+				<div class="ipt-box"><input type="text" placeholder="请输入姓名" id="customerName"></div>
+			</li>
+			<li>
+				<h4>性别</h4>
+				<div class="rdo-box"><input type="radio" class="radio" checked name="sex" id="r1" value="男"><label for="r1">男</label></div><!-- 
+				 --><div class="rdo-box"><input type="radio" class="radio" name="sex" id="r2" value="女"><label for="r2">女</label></div>
+			</li>
+			<li>
+				<h4>联系方式</h4>
+				<div class="ipt-box"><input type="text" placeholder="请留下您的联系方式" id="tel" maxlength="11"></div>
+			</li>
+			<li>
+				<div class="ipt-box" style="width: 300px;"><input type="text" placeholder="请输入验证码" id="verifyCode"></div>
+				<a href="javascript:;" class="get-code">点击获取验证码</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="submit">提交申请</a>
+			</li>
+		</ul>
+	</div>
 
+	<div class="main">
+		<h2>二孩政策加速新生儿增长</h2>
+		<img src="./images/join-i1.png" alt="泡泡塘">
+		<h2>万亿级母婴市场风口</h2>
+		<img src="./images/join-i2.png" alt="泡泡塘">
+	</div>
 
 
 
 	<footer>
 		<div class="footer">
 			<div class="footer-logo"><img src="./images/logo-footer.png" alt="泡泡塘"></div>
-			<div class="footer-nav">
+			<!-- <div class="footer-nav">
 				<ul>
 					<li><a href="javascript:;">工作机会</a></li>
 					<li><a href="javascript:;">联系我们</a></li>
 				</ul>
-			</div>
+			</div> -->
 			<div class="footer-icon">
 				<ul>
-					<li><a href="javascript:;"><img src="./images/icon-toutiao.png" alt="泡泡塘"></a></li>
-					<li><a href="javascript:;"><img src="./images/icon-weibo.png" alt="泡泡塘"></a></li>
-					<li><a href="javascript:;"><img src="./images/icon-wchat.png" alt="泡泡塘"></a></li>
+					<li><a href="https://www.toutiao.com/c/user/97067838290/#mid=1602582879118350" target="_blank"><img src="./images/icon-toutiao.png" alt="泡泡塘"></a></li>
+					<li><a href="https://weibo.com/paopaotangshuiyu" target="_blank"><img src="./images/icon-weibo.png" alt="泡泡塘"></a></li>
+					<li><a href="javascript:;" onclick="document.getElementById('qrcode').style.display = 'block'"><img src="./images/icon-wchat.png" alt="泡泡塘"></a></li>
 				</ul>
 			</div>
-			<div class="footer-qrcode"><img src="./images/qrcode.png" alt="泡泡塘"></div>
+			<div class="footer-qrcode" style="display: none;" id="qrcode"><img src="./images/qrcode.png" alt="泡泡塘"></div>
 		</div>
-	</footer>
-	<div class="copyright">copyright@2018 yuerqinshui.com, All Rights Reserved. <span>备案/许可证编号为: 京ICP备18039345号</span></div>
+	</footer>	
+	<div class="copyright">2015-2018 北京市泡泡塘</span></div>
+		<script>
+		var submit = document.getElementsByClassName('submit')[0];
+		var getCode =  document.getElementsByClassName('get-code')[0];
+
+		var tel = document.getElementById('tel');
+		var telRegExp = /^((13|14|15|16|17|18|19)[0-9]{1}\d{8})$/;
+		getCode.onclick = function () {
+			if (tel.value && telRegExp.test(tel.value)) {
+				ajax('https://oac.beibeiyue.com/s/toVerify', { phone: tel.value, brandId: 3 }, function() {
+					var time = 60;
+					getCode.classList.add('active')
+					var interval = setInterval(function() {
+						time--;
+						if (time > 0) {
+							getCode.innerText = time + 's后重新获取';
+						} else { clearInterval(interval); getCode.classList.remove('active'); getCode.innerText = '点击获取验证码'; }
+					}, 1000)
+				});
+			} else { alert('请输入正确的手机号'); }
+		}
+
+	  var radio = document.getElementsByClassName("radio");
+		submit.onclick = function() {
+
+      var sex = null;
+      for(var i = 0; i < radio.length; i++){
+        if(radio[i].checked == true) {
+	        sex = radio[i].value;
+	        break;
+       	}
+
+      }
+			var customerName = document.getElementById('customerName').value,
+					tel = document.getElementById('tel').value,
+					source = '泡泡塘官网',
+					verifyCode = document.getElementById('verifyCode').value;
+			if (!customerName) { alert('请填写姓名'); return; }
+			if (!tel || !telRegExp.test(tel)) { alert('请填写正确的手机号'); return; }
+			if (!verifyCode) { alert('请填写验证码'); return; }
+			ajax('https://oac.beibeiyue.com/s/calcShopCostNew', { name: customerName, mobile: tel, source: source, checkCode: verifyCode,nodeThree:10001015, sex: sex, brandId: 3,basepath:window.location.href, source: 36 }, function(res) {
+				alert(res.flag == 0 ? '提交成功' : res.flag == 5 ? '验证码校验失败' : '提交失败');
+				if (res.flag == 0) {
+					document.getElementById('customerName').value = ''
+					document.getElementById('tel').value = ''
+					document.getElementById('verifyCode').value = ''
+				}
+			})
+		}
+
+		function ajax(url, params, callback) {
+			var body = [];
+			for (var key in params) {
+				body.push(key + '=' + params[key]);
+			}
+			body = body.join('&');
+			var xml = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+			xml.open('post', url, true);
+			xml.setRequestHeader("content-type", "application/x-www-form-urlencoded")
+      xml.send(body);
+      xml.onreadystatechange = function() {
+      	if (xml.readyState == 4 && (xml.status == 200 || xml.status == 304)) {
+      		try{
+      			callback(JSON.parse(xml.responseText))
+      		}catch(err) {
+      			alert('提交失败')
+      		}
+      	}
+      }
+		}
+	</script>
 </body>
 </html>
